@@ -7,26 +7,15 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-500: oklch(0.637 0.237 25.331);
-    --color-red-800: oklch(0.444 0.177 26.899);
     --color-amber-500: oklch(0.769 0.188 70.08);
-    --color-amber-600: oklch(0.666 0.179 58.318);
     --color-amber-700: oklch(0.555 0.163 48.998);
-    --color-amber-800: oklch(0.473 0.137 46.201);
     --color-yellow-500: oklch(0.795 0.184 86.047);
-    --color-yellow-800: oklch(0.476 0.114 61.907);
     --color-green-500: oklch(0.723 0.219 149.579);
-    --color-green-800: oklch(0.448 0.119 151.328);
-    --color-cyan-400: oklch(0.789 0.154 211.53);
     --color-violet-200: oklch(0.894 0.057 293.283);
     --color-violet-600: oklch(0.541 0.281 293.009);
-    --color-gray-800: oklch(0.278 0.033 256.848);
     --color-black: #000;
+    --color-white: #fff;
     --spacing: 0.25rem;
-    --text-lg: 1.125rem;
-    --text-lg--line-height: calc(1.75 / 1.125);
-    --text-3xl: 1.875rem;
-    --text-3xl--line-height: calc(2.25 / 1.875);
-    --font-weight-bold: 700;
     --font-weight-extrabold: 800;
     --radius-md: 0.375rem;
     --ease-in: cubic-bezier(0.4, 0, 1, 1);
@@ -361,9 +350,6 @@
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
   }
-  .mt-10 {
-    margin-top: calc(var(--spacing) * 10);
-  }
   .box-border {
     box-sizing: border-box;
   }
@@ -468,9 +454,6 @@
   }
   .min-h-screen {
     min-height: 100vh;
-  }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
@@ -888,13 +871,6 @@
       --tw-space-y-reverse: 1;
     }
   }
-  .space-x-6 {
-    :where(& > :not(:last-child)) {
-      --tw-space-x-reverse: 0;
-      margin-inline-start: calc(calc(var(--spacing) * 6) * var(--tw-space-x-reverse));
-      margin-inline-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-x-reverse)));
-    }
-  }
   .space-x-reverse {
     :where(& > :not(:last-child)) {
       --tw-space-x-reverse: 1;
@@ -1123,14 +1099,8 @@
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
   }
-  .bg-gray-800 {
-    background-color: var(--color-gray-800);
-  }
   .bg-green-500 {
     background-color: var(--color-green-500);
-  }
-  .bg-green-800 {
-    background-color: var(--color-green-800);
   }
   .bg-red-500 {
     background-color: var(--color-red-500);
@@ -1141,17 +1111,14 @@
   .bg-red-500\/\[50\%\] {
     background-color: color-mix(in oklab, var(--color-red-500) 50%, transparent);
   }
-  .bg-red-800 {
-    background-color: var(--color-red-800);
-  }
   .bg-violet-200 {
     background-color: var(--color-violet-200);
   }
+  .bg-white {
+    background-color: var(--color-white);
+  }
   .bg-yellow-500 {
     background-color: var(--color-yellow-500);
-  }
-  .bg-yellow-800 {
-    background-color: var(--color-yellow-800);
   }
   .-bg-conic {
     --tw-gradient-position: in oklab;
@@ -1367,21 +1334,9 @@
   .font-mono {
     font-family: var(--font-mono);
   }
-  .text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
-  }
-  .text-lg {
-    font-size: var(--text-lg);
-    line-height: var(--tw-leading, var(--text-lg--line-height));
-  }
   .leading-none {
     --tw-leading: 1;
     line-height: 1;
-  }
-  .font-bold {
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
   }
   .font-extrabold {
     --tw-font-weight: var(--font-weight-extrabold);
@@ -1462,9 +1417,6 @@
   }
   .text-black {
     color: var(--color-black);
-  }
-  .text-cyan-400 {
-    color: var(--color-cyan-400);
   }
   .capitalize {
     text-transform: capitalize;
@@ -1904,43 +1856,8 @@
   .transform-view {
     transform-box: view-box;
   }
-  .max-md\:bg-amber-600 {
-    @media (width < 48rem) {
-      background-color: var(--color-amber-600);
-    }
-  }
-  .max-md\:bg-amber-700 {
-    @media (width < 48rem) {
-      background-color: var(--color-amber-700);
-    }
-  }
-  .max-md\:bg-amber-800 {
-    @media (width < 48rem) {
-      background-color: var(--color-amber-800);
-    }
-  }
-  .max-sm\:bg-amber-500 {
-    @media (width < 40rem) {
-      background-color: var(--color-amber-500);
-    }
-  }
-  .sm\:block {
-    @media (width >= 40rem) {
-      display: block;
-    }
-  }
   .sm\:bg-amber-500 {
     @media (width >= 40rem) {
-      background-color: var(--color-amber-500);
-    }
-  }
-  .md\:block {
-    @media (width >= 48rem) {
-      display: block;
-    }
-  }
-  .md\:bg-amber-500 {
-    @media (width >= 48rem) {
       background-color: var(--color-amber-500);
     }
   }
@@ -1949,9 +1866,14 @@
       background-color: var(--color-amber-700);
     }
   }
-  .md\:bg-amber-800 {
-    @media (width >= 48rem) {
-      background-color: var(--color-amber-800);
+  .dark\:bg-black {
+    &:where(.dark, .dark *) {
+      background-color: var(--color-black);
+    }
+  }
+  .dark\:text-white {
+    &:where(.dark, .dark *) {
+      color: var(--color-white);
     }
   }
 }
